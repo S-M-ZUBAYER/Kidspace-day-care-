@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebookF, FaGithub, FaGoogle } from 'react-icons/fa';
-import img_logo from '../../../../../assets/img/logo.jpg'
-import img from '../../../../../assets/img/logIn.png'
+import img_logo from '../../../../assets/img/logo.jpg';
+import img from '../../../../assets/img/logIn.png'
 
 const Register = () => {
     return (
@@ -14,7 +14,7 @@ const Register = () => {
                             <img className="object-cover w-24 h-24 mx-auto rounded-full" src={img_logo} />
 
                             <div className="flex items-center justify-center mt-6">
-                                <a href="#" className="w-1/3 pb-4 font-medium text-center text-gray-800 capitalize border-b-2 border-blue-500 dark:border-blue-400 dark:text-white">
+                                <a href="#" className="w-1/3 pb-4 font-medium text-center text-yellow-100 capitalize border-b-2 border-blue-500 dark:border-blue-400 dark:text-white">
                                     sign up
                                 </a>
                             </div>

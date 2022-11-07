@@ -1,7 +1,9 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
-import Login from '../../components/Pages/AuthPages/Login/Login';
-import Register from '../../components/Pages/AuthPages/Login/Register/Register';
+import LogIn from '../../components/Pages/AuthPages/Login/Login';
+import Register from '../../components/Pages/AuthPages/Register/Register';
+
+
 import Home from '../../components/Pages/Homepage/Home/Home';
 import Main from "../../layout/Main/Main";
 import ErrorPage from '../../Shared/ErrorPage/ErrorPage';
@@ -29,12 +31,12 @@ export const routes = createBrowserRouter([
             // },
             {
                 path: '/login',
-                element: <Login></Login>
+                element: <LogIn></LogIn>
             },
             {
                 path: '/register',
                 element: <Register></Register>
-            },
+            }
             // {
             //     path: '/about',
             //     element: <About></About>

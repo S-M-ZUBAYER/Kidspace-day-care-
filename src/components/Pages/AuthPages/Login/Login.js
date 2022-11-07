@@ -113,7 +113,7 @@ const LogIn = () => {
                                 <img className="object-cover w-24 h-24 mx-auto rounded-full" src={img_logo} />
 
                                 <div className="flex items-center justify-center mt-6">
-                                    <a href="/" className="w-1/3 pb-4 font-medium text-center text-gray-500 capitalize border-b dark:border-gray-400 dark:text-gray-300 ">
+                                    <a href="/" className="w-1/3 pb-4 font-medium text-center text-yellow-100 capitalize border-b dark:border-gray-400 dark:text-gray-300 ">
                                         sign in
                                     </a>
                                 </div>
