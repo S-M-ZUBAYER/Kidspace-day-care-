@@ -4,39 +4,39 @@ import { Link } from 'react-router-dom';
 const Contact = () => {
     return (
         <div>
-            <div class="flex justify-center bg-gradient-to-t from-black via-slate-800 to-black">
-                <div class="flex md:flex-row flex-col justify-between  m-4 ">
-                    <div class="lg:w-full bg-black bg-gradient-to-t from-gray-700 via-slate-800 to-gray-700 ">
-                        <div class="flex justify-center flex-col items-center ">
-                            <div class="text-white m-6 text-xl z-200"> Contact Us </div>
-                            <div class="text-white m-6 z-200"> We are always here to help out whatever way we can : </div>
-                            <div class="text-white m-6 z-200">
-                                <div class="flex m-2">
-                                    <ion-icon name="person-outline" class="m-2"></ion-icon> <input placeholder="Name"
-                                        class="bg-gray-800 p-2 rounded-3xl" />
+            <div className="flex justify-center bg-gradient-to-t from-black via-slate-800 to-black">
+                <div className="flex md:flex-row flex-col justify-between  m-4 ">
+                    <div className="lg:w-full bg-black bg-gradient-to-t from-gray-700 via-slate-800 to-gray-700 ">
+                        <div className="flex justify-center flex-col items-center ">
+                            <div className="text-white m-6 text-xl z-200"> Contact Us </div>
+                            <div className="text-white m-6 z-200"> We are always here to help out whatever way we can : </div>
+                            <div className="text-white m-6 z-200">
+                                <div className="flex m-2">
+                                    <ion-icon name="person-outline" className="m-2"></ion-icon> <input placeholder="Name"
+                                        className="bg-gray-800 p-2 rounded-3xl" />
                                 </div>
-                                <div class="flex m-2">
-                                    <ion-icon name="mail-outline" class="m-2"></ion-icon> <input placeholder="E-mail"
-                                        class="bg-gray-800 p-2 rounded-3xl" />
+                                <div className="flex m-2">
+                                    <ion-icon name="mail-outline" className="m-2"></ion-icon> <input placeholder="E-mail"
+                                        className="bg-gray-800 p-2 rounded-3xl" />
                                 </div>
-                                <div class="flex m-2">
-                                    <ion-icon name="call-outline" class="m-2"></ion-icon> <input placeholder="Phone"
-                                        class="bg-gray-800 p-2 rounded-3xl" />
+                                <div className="flex m-2">
+                                    <ion-icon name="call-outline" className="m-2"></ion-icon> <input placeholder="Phone"
+                                        className="bg-gray-800 p-2 rounded-3xl" />
                                 </div>
-                                <div class="flex m-2">
-                                    <ion-icon name="create-outline" class="m-2"></ion-icon> <input
-                                        placeholder="Type your message" class="bg-gray-800 p-2 rounded-3xl" />
+                                <div className="flex m-2">
+                                    <ion-icon name="create-outline" className="m-2"></ion-icon> <input
+                                        placeholder="Type your message" className="bg-gray-800 p-2 rounded-3xl" />
                                 </div>
-                                <div class="block m-2justify-center">
-                                    <div class="bg-blue-700 p-2 rounded-3xl hover:bg-blue-800 cursor-pointer ">
-                                        <div class="flex justify-center"> Send </div>
+                                <div className="block m-2justify-center">
+                                    <div className="bg-blue-700 p-2 rounded-3xl hover:bg-blue-800 cursor-pointer ">
+                                        <div className="flex justify-center"> Send </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-3/4 lg:w-2/3 ">
-                        <div class="w-3/4 lg:w-1/2 overflow-contain h-min">  <iframe width="80%" height="500px" className="mx-auto rounded-2xl" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20Kushtia+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> </div>
+                    <div className="w-3/4 lg:w-2/3 ">
+                        <div className="w-3/4 lg:w-1/2 overflow-contain h-min">  <iframe width="80%" height="500px" className="mx-auto rounded-2xl" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20Kushtia+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> </div>
                     </div>
                 </div>
             </div>
@@ -83,8 +83,8 @@ const Contact = () => {
                             <div className="mt-6 space-y-8 md:mt-8">
                                 <p className="flex items-start -mx-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 mx-2 text-blue-500 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
 
                                     <span className="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">
@@ -95,7 +95,7 @@ const Contact = () => {
 
                                 <p className="flex items-start -mx-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 mx-2 text-blue-500 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                     </svg>
 
                                     <span className="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">+880 1304979278</span>
@@ -103,7 +103,7 @@ const Contact = () => {
 
                                 <p className="flex items-start -mx-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 mx-2 text-blue-500 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                     </svg>
 
                                     <span className="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">smzubayer9004@gamil.com</span>

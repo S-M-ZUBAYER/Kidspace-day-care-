@@ -16,7 +16,6 @@ const DetailsPage = () => {
             );
 
     }, []);
-    console.log(service)
     return (
         <div className="bg-gradient-to-t from-black via-slate-800 to-gray-900">
             <div className="grid grid-cols-1  lg:grid-cols-4 text-slate-300">
