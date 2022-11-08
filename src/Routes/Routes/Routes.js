@@ -10,6 +10,7 @@ import PrivateRoutes from '../PrivateRoutes/PrivateRoutes'
 import Main from "../../layout/Main/Main";
 import ErrorPage from '../../Shared/ErrorPage/ErrorPage';
 import Contact from '../../components/Pages/Contact/Contact';
+import DetailsPage from '../../components/Pages/DetailsPage/DetailsPage';
 
 
 export const routes = createBrowserRouter([
@@ -33,7 +34,7 @@ export const routes = createBrowserRouter([
             // },
             {
                 path: '/services',
-                // loader: () => fetch('https://study-zone-server-site.vercel.app/courses'),
+                // loader: () => fetch('http://localhost:5000/services'),
                 element: <PrivateRoutes><Services></Services></PrivateRoutes>
             },
             {
@@ -60,11 +61,11 @@ export const routes = createBrowserRouter([
                 path: '/contact',
                 element: <Contact></Contact>
             },
-            // {
-            //     path: '/courses/:id',
-            //     loader: ({ params }) => fetch(`https://study-zone-server-site.vercel.app/courses/${params.id}`),
-            //     element: <CourseDetails></CourseDetails>
-            // },
+            {
+                path: '/service/:id',
+                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`),
+                element: <DetailsPage></DetailsPage>
+            },
             // {
             //     path: '/items/:course_id',
             //     loader: ({ params }) => fetch(`https://study-zone-server-site.vercel.app/items/${params.course_id}`),

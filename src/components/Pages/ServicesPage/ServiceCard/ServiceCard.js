@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ServiceCard = ({ service }) => {
-    const { serviceName, img, time, price, description, facility, rating } = service;
+    const { serviceName, _id, img, time, price, description, facility, rating } = service;
     return (
         <div>
             <div className="max-w-lg p-4 shadow-md rounded-tl-2xl rounded-br-2xl  dark:dark:bg-gray-900 dark:dark:text-gray-100 bg-gradient-to-t from-black via-slate-800 to-gray-600 text-slate-400">
@@ -23,7 +24,9 @@ const ServiceCard = ({ service }) => {
                             <h3 className="text-xl font-semibold dark:dark:text-violet-400">{serviceName}</h3>
                         </a>
                         <p className="leading-snug dark:dark:text-gray-400">{description.length > 100 ? description.slice(0, 100) + '...' : description}</p>
-                        <button className="bg-gradient-to-t from-red-400 via-orange-400 to-lime-400 w-full py-2 rounded-tl-xl rounded-br-xl text-lg font-bold text-black">Details</button>
+                        <Link to={`/service/${_id}`}>
+                            <button className="bg-gradient-to-t from-red-400 via-orange-400 to-lime-400 w-full py-2 rounded-tl-xl rounded-br-xl text-lg font-bold text-black">Details</button>
+                        </Link>
                     </div>
                 </div>
             </div>
