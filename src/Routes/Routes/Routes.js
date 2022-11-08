@@ -5,6 +5,8 @@ import Register from '../../components/Pages/AuthPages/Register/Register';
 
 
 import Home from '../../components/Pages/Homepage/Home/Home';
+import Services from '../../components/Pages/ServicesPage/Services/Services';
+import PrivateRoutes from '../PrivateRoutes/PrivateRoutes'
 import Main from "../../layout/Main/Main";
 import ErrorPage from '../../Shared/ErrorPage/ErrorPage';
 
@@ -19,16 +21,20 @@ export const routes = createBrowserRouter([
                 path: '/',
                 element: <Home></Home>
             },
+            {
+                path: '/home',
+                element: <Home></Home>
+            },
             // {
             //     path: '/home',
             //     loader: () => fetch('https://study-zone-server-site.vercel.app/courses'),
             //     element: <Home></Home>
             // },
-            // {
-            //     path: '/courses',
-            //     loader: () => fetch('https://study-zone-server-site.vercel.app/courses'),
-            //     element: <Courses></Courses>
-            // },
+            {
+                path: '/services',
+                // loader: () => fetch('https://study-zone-server-site.vercel.app/courses'),
+                element: <PrivateRoutes><Services></Services></PrivateRoutes>
+            },
             {
                 path: '/login',
                 element: <LogIn></LogIn>

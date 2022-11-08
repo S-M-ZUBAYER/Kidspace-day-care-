@@ -1,24 +1,119 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
 import { FaFacebookF, FaGithub, FaGoogle } from 'react-icons/fa';
-import img_logo from '../../../../assets/img/logo.jpg';
+import { Form, Link } from 'react-router-dom';
 import img from '../../../../assets/img/logIn.png'
+import img_logo from '../../../../assets/img/logo.jpg'
+import { FacebookAuthProvider, GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
+import { useState } from 'react';
+import { AuthContext } from '../../../../contexts/AuthProvider/AuthProvider';
+import toast from 'react-hot-toast';
 
 const Register = () => {
+    const [error, setError] = useState('');
+    const [accepted, setAccepted] = useState(false);
+    const [seccess, setSuccess] = useState(false)
+    const { registerWithEmail, LogInWithGoogle, logInWithGithub, logInWithFacebook, updateUserinfo } = useContext(AuthContext);
+    const googleProvider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
+    const facebookProvider = new FacebookAuthProvider();
+    const handleToRegister = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        setSuccess(false);
+        const email = form.email.value;
+        const name = form.name.value;
+        const photoURL = form.photoURL.value;
+        const password = form.password.value;
+        const confirmPassword = form.conPassword.value;
+        if (password !== confirmPassword) {
+            setError("password & confirmPassword didn't match");
+            return;
+        }
+        if (!/(?=.{6,})/.test(password)) {
+            setError('Password contains at least 6 digit');
+            return;
+        }
+        if (!/(?=.*[a-zA-Z])/.test(password)) {
+            setError('Passwords will contain at least 1 upper and 1 lower case letter');
+            return;
+        }
+        if (!/(?=.*\d)/.test(password)) {
+            setError('Passwords will contain at least 1 number');
+            return;
+        }
+        if (!/(?=.*[!#$%&? "])/.test(password)) {
+            setError('Passwords will contain at least given special characters');
+            return;
+        }
+        setError("");
+        registerWithEmail(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+                form.reset();
+                setError('')
+                setSuccess(true);
+                handlerUpdateUserInfo(name, photoURL);
+                toast.success('sucess')
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+
+    }
+    const handlerUpdateUserInfo = (name, photoURL) => {
+        const profile = {
+            displayName: name,
+            photoURL: photoURL
+
+        }
+        updateUserinfo(profile)
+            .then(() => { })
+            .catch((error) => { setError(error) })
+    }
+
+    // const handleToCheck = (event) => {
+    //     setAccepted(event.target.checked);
+    // }
+    const SignInWithGoogle = () => {
+        LogInWithGoogle(googleProvider)
+            .then((result) => {
+                const user = result.user;
+                console.log(user)
+            })
+            .catch(error => console.error(error))
+    }
+    const singInWithGithub = () => {
+        logInWithGithub(githubProvider)
+            .then((result) => {
+                const user = result.user;
+                console.log(user)
+            })
+            .catch(error => console.error(error))
+    }
+    const singInWithFacebook = () => {
+        logInWithFacebook(facebookProvider)
+            .then((result) => {
+                const user = result.user;
+                console.log(user)
+            })
+            .catch(error => console.error(error))
+    }
+
     return (
-        <div className="bg-white dark:bg-gray-900 pb-24 pt-10  bg-gradient-to-t from-black via-slate-800 to-gray-900">
+        <div className="bg-white dark:bg-gray-900 py-10  bg-gradient-to-t from-black via-slate-800 to-gray-900 ">
             <div className="flex justify-center h-screen bg-gradient-to-t from-black via-slate-800 to-gray-900">
                 <section className="bg-white dark:bg-gray-900 lg:w-1/2 mx-auto">
                     <div className="container flex items-center justify-center min-h-screen px-6 mx-auto bg-gradient-to-t from-black via-slate-800 to-gray-900">
-                        <div className="w-full max-w-md rounded-xl p-4 bg-gradient-to-t from-black via-slate-800 to-gray-900">
+                        <div onSubmit={handleToRegister} className="w-full max-w-md rounded-xl p-4 bg-gradient-to-t from-black via-purple-900 to-violet-600">
                             <img className="object-cover w-24 h-24 mx-auto rounded-full" src={img_logo} />
 
                             <div className="flex items-center justify-center mt-6">
-                                <a href="#" className="w-1/3 pb-4 font-medium text-center text-yellow-100 capitalize border-b-2 border-blue-500 dark:border-blue-400 dark:text-white">
+                                <a href="#" className="w-1/3 pb-4 font-medium text-center text-gray-800 capitalize border-b-2 border-blue-500 dark:border-blue-400 dark:text-white">
                                     sign up
                                 </a>
                             </div>
-                            <form>
+                            <form onSubmit={handleToRegister}>
                                 <div className="relative flex items-center mt-4">
                                     <span className="absolute">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 mx-3 text-gray-300 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -68,7 +163,7 @@ const Register = () => {
 
                                     <input type="password" name='conPassword' className="block w-full px-10 py-3 text-gray-700 bg-white border rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Confirm Password" />
                                 </div>
-                                <p className="text-orange-900 font-bold"></p>
+                                <p className="text-orange-900 font-bold"><small>{error}</small></p>
                                 {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
                                     <Form.Check
                                         type="checkbox"
@@ -81,13 +176,13 @@ const Register = () => {
                             </form>
                             <div className="mt-6 text-slate-300">
                                 <div className="flex justify-center space-x-4 mt-4">
-                                    <button aria-label="Log in with Google" className="p-3 rounded-sm">
+                                    <button onClick={SignInWithGoogle} aria-label="Log in with Google" className="p-3 rounded-sm">
                                         <FaGoogle></FaGoogle>
                                     </button>
-                                    <button aria-label="Log in with Twitter" className="p-3 rounded-sm">
+                                    <button onClick={singInWithFacebook} aria-label="Log in with Twitter" className="p-3 rounded-sm">
                                         <FaFacebookF></FaFacebookF>
                                     </button>
-                                    <button aria-label="Log in with GitHub" className="p-3 rounded-sm">
+                                    <button onClick={singInWithGithub} aria-label="Log in with GitHub" className="p-3 rounded-sm">
                                         <FaGithub></FaGithub>
                                     </button>
                                 </div>

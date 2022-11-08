@@ -16,8 +16,8 @@ const Navbar = () => {
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li><Link to='/home'>Home</Link></li>
                             <li tabIndex={0}>
-                                <Link to='/courses' className="justify-between">
-                                    Courses
+                                <Link to='/services' className="justify-between">
+                                    Services
                                     <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
                                 </Link>
 
@@ -34,8 +34,8 @@ const Navbar = () => {
                     <ul className="menu menu-horizontal p-0">
                         <li><Link to='/home'>Home</Link></li>
                         <li tabIndex={0}>
-                            <Link to='/courses'>
-                                Courses
+                            <Link to='/services'>
+                                Services
                                 <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                             </Link>
                             {/* <ul className="p-2">
@@ -56,7 +56,7 @@ const Navbar = () => {
                             <img title={user.displayName} className="w-8 h-8 rounded-xl mr-2" src={user?.photoURL} ></img>
                             <button onClick={() => logOut()} className="btn-small px-3 py-1  rounded-lg bg-yellow-400 text-black lg:mr-3">Log Out</button>
                         </> :
-                        <Link to='/login' className="btn-small px-3 py-1 rounded-lg bg-lime-300 text-black lg:mr-3">Log In</Link>
+                        <Link to='/login' className="btn-small px-3 py-1 rounded-tl-xl rounded-br-xl bg-lime-300 text-black lg:mr-3">Log In</Link>
                     }
 
 
