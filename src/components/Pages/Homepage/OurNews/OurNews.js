@@ -1,9 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const OurNews = () => {
     return (
         <div>
-            <div className="flex justify-center  p-4 bg-gradient-to-t bg-gradient-to-t from-black via-slate-800 to-black">
+            <Link to='/services' className="bg-black">
+                <button className="w-1/2 flex justify-center mx-auto bg-gradient-to-t from-red-400 via-orange-400 to-red-600  py-2 rounded-tl-xl rounded-br-xl text-lg font-bold text-black">See All Services</button>
+            </Link>
+            <div className="flex justify-center  p-4 bg-gradient-to-t from-black via-slate-800 to-black">
                 <div className="flex flex-col justify-center items-center ">
                     <div className=" text-2xl md:text-5xl font-medium flex my-6">
                         <div>Testimonials By </div>

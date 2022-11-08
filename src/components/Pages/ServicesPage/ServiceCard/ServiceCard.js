@@ -25,7 +25,7 @@ const ServiceCard = ({ service }) => {
                         </a>
                         <p className="leading-snug dark:dark:text-gray-400">{description.length > 100 ? description.slice(0, 100) + '...' : description}</p>
                         <Link to={`/service/${_id}`}>
-                            <button className="bg-gradient-to-t from-red-400 via-orange-400 to-lime-400 w-full py-2 rounded-tl-xl rounded-br-xl text-lg font-bold text-black">Details</button>
+                            <button className="mt-5 bg-gradient-to-t from-red-400 via-orange-400 to-lime-400 w-full py-2 rounded-tl-xl rounded-br-xl text-lg font-bold text-black">Details</button>
                         </Link>
                     </div>
                 </div>

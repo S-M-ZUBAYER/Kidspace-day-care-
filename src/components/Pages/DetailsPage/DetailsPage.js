@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import CheckOutForm from './CheckOutForm/CheckOutForm';
+import Review from './Review/Review';
+import ReviewForm from './Review/Review';
 import ServiceItems from './ServiceItems/ServiceItems';
 
 const DetailsPage = () => {
@@ -31,6 +33,7 @@ const DetailsPage = () => {
                 </div>
 
             </div>
+            <Review service={service}></Review>
         </div>
     );
 };
