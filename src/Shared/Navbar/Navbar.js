@@ -54,9 +54,9 @@ const Navbar = () => {
                     {user?.uid ?
                         <>
                             <img title={user.displayName} className="w-8 h-8 rounded-xl mr-2" src={user?.photoURL} ></img>
-                            <button onClick={() => logOut()} className="btn-small px-3 py-1  rounded-lg bg-yellow-400 text-black lg:mr-3">Log Out</button>
+                            <button onClick={() => logOut()} className="btn-small px-3 py-1 rounded-tl-xl rounded-br-xl bg-gradient-to-t from-orange-400 via-amber-300 to-lime-300 text-black lg:mr-3">Log Out</button>
                         </> :
-                        <Link to='/login' className="btn-small px-3 py-1 rounded-tl-xl rounded-br-xl bg-lime-300 text-black lg:mr-3">Log In</Link>
+                        <Link to='/login' className="btn-small px-3 py-1 rounded-tl-xl rounded-br-xl bg-gradient-to-t from-lime-400 via-teal-300 to-emerald-600 text-black lg:mr-3">Log In</Link>
                     }
 
 

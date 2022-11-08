@@ -9,6 +9,7 @@ import Services from '../../components/Pages/ServicesPage/Services/Services';
 import PrivateRoutes from '../PrivateRoutes/PrivateRoutes'
 import Main from "../../layout/Main/Main";
 import ErrorPage from '../../Shared/ErrorPage/ErrorPage';
+import Contact from '../../components/Pages/Contact/Contact';
 
 
 export const routes = createBrowserRouter([
@@ -42,7 +43,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
-            }
+            },
             // {
             //     path: '/about',
             //     element: <About></About>
@@ -55,10 +56,10 @@ export const routes = createBrowserRouter([
             //     path: '/blog',
             //     element: <Blog></Blog>
             // },
-            // {
-            //     path: '/contact',
-            //     element: <Contact></Contact>
-            // },
+            {
+                path: '/contact',
+                element: <Contact></Contact>
+            },
             // {
             //     path: '/courses/:id',
             //     loader: ({ params }) => fetch(`https://study-zone-server-site.vercel.app/courses/${params.id}`),

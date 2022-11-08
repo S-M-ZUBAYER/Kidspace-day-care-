@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
-            <div className="bg-gray-700 p-3 space-y-10 md:grid grid-cols-2 md:-mt-6 lg:grid-cols-4 bg-gradient-to-t from-black via-slate-800 to-gray-900">
+            <div className="bg-gray-700 p-3 space-y-10 md:grid grid-cols-2 md:-mt-6 lg:grid-cols-4 bg-gradient-to-t from-black via-slate-800 to-black">
                 <div className="w-1/2 md:ml-24 md:mt-9 md:w-3/4">
                     <h1 className="text-orange-400 text-xl font-medium">Company</h1> <br />
                     <p className="text-gray-300/80 text-base hover:text-yellow-300 cursor-none"> A123 Lost Street <br /> Chandigarh,
@@ -52,7 +52,7 @@ const Footer = () => {
                     </button>
                 </div>
             </div>
-            <div className="bg-gray-900 p-3 flex flex-col text-center pt-5 space-y-8 md:flex-row md:justify-between md:space-y-0">
+            <div className="bg-gray-900 p-3 flex flex-col text-center pt-5 space-y-8 md:flex-row md:justify-between md:space-y-0 bg-gradient-to-t from-black via-slate-800 to-gray-900">
                 <div
                     className="flex mx-3 justify-between space-x-20 md:flex-row text-gray-200 md:space-x-28 md:ml-20 lg:ml-24 lg:space-x-[13rem] xl:space-x-72 xl:ml-24">
                     <p>@ Copyright <strong>Company.</strong>All Rights Reserved</p>

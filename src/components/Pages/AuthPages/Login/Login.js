@@ -29,14 +29,11 @@ const LogIn = () => {
                 console.log(user);
                 form.reset();
                 setError('');
-                toast.success('Log In successfully')
+                toast.success('Log In successfully completed')
                 if (user?.uid) {
                     navigate(from, { replace: true });
-                }
-                else {
-                    toast.error("Your Email wasn't verified. please verify first!!!")
-                }
 
+                }
             })
             .catch(error => {
                 setError(error.message);
@@ -107,7 +104,7 @@ const LogIn = () => {
                             </div>
                         </div>
                     </div>
-                    <section className="bg-white dark:bg-gray-900 lg:w-1/2 mx-auto bg-gradient-to-t from-black via-slate-800 to-gray-900">
+                    <section className="bg-white dark:bg-gray-900 lg:w-1/2 mx-auto bg-gradient-to-t from-black via-slate-800 to-slate-600">
                         <div className="container flex items-center justify-center min-h-screen px-6 mx-auto">
                             <div className="w-full max-w-md  rounded-xl p-12 bg-gradient-to-t from-black via-slate-800 to-gray-900">
                                 <img className="object-cover w-24 h-24 mx-auto rounded-full" src={img_logo} />

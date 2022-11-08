@@ -54,10 +54,11 @@ const Register = () => {
                 setError('')
                 setSuccess(true);
                 handlerUpdateUserInfo(name, photoURL);
-                toast.success('sucess')
+                toast.success('Registration successfully completed')
             })
             .catch(error => {
                 setError(error.message);
+                toast.error('Registration uncompleted')
             })
 
     }
@@ -79,6 +80,7 @@ const Register = () => {
         LogInWithGoogle(googleProvider)
             .then((result) => {
                 const user = result.user;
+                toast.success('Login successfully', { duration: 1000 })
                 console.log(user)
             })
             .catch(error => console.error(error))
@@ -101,15 +103,15 @@ const Register = () => {
     }
 
     return (
-        <div className="bg-white dark:bg-gray-900 py-10  bg-gradient-to-t from-black via-slate-800 to-gray-900 ">
-            <div className="flex justify-center h-screen bg-gradient-to-t from-black via-slate-800 to-gray-900">
+        <div className="bg-white dark:bg-gray-900 pt-10 bg-gradient-to-t from-gray-900 via-slate-800 to-gray-900 ">
+            <div className="flex justify-center pb-12 h-screen bg-gradient-to-t from-black via-slate-800 to-gray-900">
                 <section className="bg-white dark:bg-gray-900 lg:w-1/2 mx-auto">
                     <div className="container flex items-center justify-center min-h-screen px-6 mx-auto bg-gradient-to-t from-black via-slate-800 to-gray-900">
-                        <div onSubmit={handleToRegister} className="w-full max-w-md rounded-xl p-4 bg-gradient-to-t from-black via-purple-900 to-violet-600">
+                        <div onSubmit={handleToRegister} className="w-full max-w-md rounded-xl p-4 bg-gradient-to-t from-black via-slate-800 to-slate-600">
                             <img className="object-cover w-24 h-24 mx-auto rounded-full" src={img_logo} />
 
                             <div className="flex items-center justify-center mt-6">
-                                <a href="#" className="w-1/3 pb-4 font-medium text-center text-gray-800 capitalize border-b-2 border-blue-500 dark:border-blue-400 dark:text-white">
+                                <a href="#" className="w-1/3 pb-4 font-medium text-center text-orange-300 capitalize border-b-2 border-blue-500 dark:border-blue-400 dark:text-white">
                                     sign up
                                 </a>
                             </div>
@@ -170,7 +172,7 @@ const Register = () => {
                                         onClick={handleToCheck}
                                         label={<>Accept <Link to='/register'>term and conditions</Link> </>} />
                                 </Form.Group> */}
-                                <button type='submit' className="w-full mt-5 px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                                <button type='submit' className="w-full mt-5 px-6 py-3 text-sm font-medium tracking-wide text-black capitalize transition-colors duration-300 transform bg-blue-500  hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50 rounded-tl-xl rounded-br-xl bg-gradient-to-t from-lime-400 via-teal-300 to-emerald-600">
                                     Sign Up
                                 </button>
                             </form>

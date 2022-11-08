@@ -1,0 +1,34 @@
+import React from 'react';
+
+const ServiceCard = ({ service }) => {
+    const { serviceName, img, time, price, description, facility, rating } = service;
+    return (
+        <div>
+            <div className="max-w-lg p-4 shadow-md rounded-tl-2xl rounded-br-2xl  dark:dark:bg-gray-900 dark:dark:text-gray-100 bg-gradient-to-t from-black via-slate-800 to-gray-600 text-slate-400">
+                <div className="flex justify-between pb-4 border-bottom">
+                    <div className="flex items-center">
+                        <a rel="noopener noreferrer" href="#" className="mb-0 capitalize dark:dark:text-gray-100">Time:{time}</a>
+                    </div>
+                    <a rel="noopener noreferrer" href="#">Rating: {rating}</a>
+                </div>
+                <div className="space-y-4">
+                    <div className="space-y-2">
+                        <img src={img} alt="img" className="block object-cover object-center w-full rounded-md h-72 dark:dark:bg-gray-500" />
+                        <div className="flex items-center text-xs">
+                            <p>Price: {price}</p>
+                        </div>
+                    </div>
+                    <div className="space-y-2">
+                        <a rel="noopener noreferrer" href="#" className="block">
+                            <h3 className="text-xl font-semibold dark:dark:text-violet-400">{serviceName}</h3>
+                        </a>
+                        <p className="leading-snug dark:dark:text-gray-400">{description.length > 100 ? description.slice(0, 100) + '...' : description}</p>
+                        <button className="bg-gradient-to-t from-red-400 via-orange-400 to-lime-400 w-full py-2 rounded-tl-xl rounded-br-xl text-lg font-bold text-black">Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default ServiceCard;
