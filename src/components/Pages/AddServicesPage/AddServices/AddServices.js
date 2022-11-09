@@ -47,7 +47,7 @@ const AddServices = () => {
     }
 
     return (
-        <div className="w-full flex justify-center py-24">
+        <div className="w-full flex justify-center py-24 bg-gradient-to-t from-black via-slate-800 to-black">
 
             <div className="rounded-lg w-3/4 mx-auto lg:mx-0 bg-white p-8 shadow-lg lg:col-span-3 lg:p-12 bg-gradient-to-t from-gray-700 via-slate-800 to-gray-700">
                 <form onSubmit={handleToAddService} action="" className="space-y-4 font-semibold text-slate-900">
