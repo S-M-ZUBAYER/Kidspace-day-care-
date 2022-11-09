@@ -4,7 +4,7 @@ import { AuthContext } from '../../../../contexts/AuthProvider/AuthProvider';
 import MyReviewCard from '../MyReviewCard/MyReviewCard';
 
 const MyReviews = () => {
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
     const [myReviews, setMyReviews] = useState([]);
 
     const handleToDelete = (id) => {
@@ -26,10 +26,23 @@ const MyReviews = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myReviews?email=${user?.email}`)
-            .then(res => res.json())
-            .then(data => setMyReviews(data))
-    }, [user?.email]);
+        fetch(`http://localhost:5000/myReviews?email=${user?.email}`, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('Kid-space')}`
+            }
+        })
+            .then(res => {
+                if (res.status === 401 || res.status === 403) {
+                    return logOut();
+                }
+                return res.json()
+            })
+
+            .then(data => {
+                console.log("clint", data)
+                setMyReviews(data);
+            })
+    }, [user?.email], logOut);
 
     return (
         <div className=" bg-gradient-to-t from-black via-slate-800 to-black">

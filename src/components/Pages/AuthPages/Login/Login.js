@@ -7,6 +7,23 @@ import { FacebookAuthProvider, GithubAuthProvider, GoogleAuthProvider } from 'fi
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../../../contexts/AuthProvider/AuthProvider';
 
+const tokenCreate = (user) => {
+    const currentUser = {
+        email: user.email
+    }
+    fetch('http://localhost:5000/jwt', {
+        method: "POST",
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(currentUser)
+    })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            localStorage.setItem('Kid-space', data.token);
+        })
+}
 
 const LogIn = () => {
 
@@ -28,21 +45,7 @@ const LogIn = () => {
                 const user = result.user;
                 console.log(user);
                 //jwt token
-                const currentUser = {
-                    email: user.email
-                }
-                fetch('http://localhost:5000/jwt', {
-                    method: "POST",
-                    headers: {
-                        'content-type': 'application/json'
-                    },
-                    body: JSON.stringify(currentUser)
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        console.log(data);
-                        localStorage.setItem('Kid-space', data.token);
-                    })
+                tokenCreate(user);
 
                 form.reset();
                 setError('');
@@ -65,6 +68,7 @@ const LogIn = () => {
             .then((result) => {
                 const user = result.user;
                 console.log(user)
+                tokenCreate(user);
                 toast.success('Log In successfully completed')
                 if (user?.uid) {
                     navigate(from, { replace: true });

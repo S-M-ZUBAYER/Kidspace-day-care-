@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
+import UpdateModal from '../UpdateModal/UpdateModal';
 
 const MyReviewCard = ({ review, handleToDelete }) => {
+    // const [review1, setReview1] = useState({})
     const { serviceName, customer, customerPhoto, email, message, rating, _id } = review;
 
 
@@ -21,7 +23,7 @@ const MyReviewCard = ({ review, handleToDelete }) => {
                 <div class=" py-6">
                     <img
                         alt="Guitar"
-                        src="https://images.unsplash.com/photo-1609557927087-f9cf8e88de18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+                        src={customerPhoto}
                         class="aspect-square h-36 w-36 object-cover  md:rounded-full"
                     />
                 </div>
@@ -33,14 +35,14 @@ const MyReviewCard = ({ review, handleToDelete }) => {
                                 <h3 class="font-bold  text-gray-900">
                                     Service: {serviceName}
                                 </h3>
-                                <button to='/login' className="btn-small font-semibold px-3 py-1 rounded-tl-xl rounded-br-xl bg-gradient-to-t from-lime-400 via-teal-300 to-emerald-600 text-black lg:mr-3">Update</button>
+                                <button className="btn-small font-semibold px-3 py-1 rounded-tl-xl rounded-br-xl bg-gradient-to-t from-lime-400 via-teal-300 to-emerald-600 text-black lg:mr-3"><a href="#my-modal-2">Update</a></button>
                             </div>
 
                             <div className="flex justify-between">
                                 <h3 class="font-bold  text-gray-900">
                                     Customer: {customer}
                                 </h3>
-                                <button to='/login' onClick={() => handleToDelete(_id)} className="btn-small font-semibold px-3 py-1 rounded-tl-xl rounded-br-xl bg-gradient-to-t from-red-500 via-orange-600 to-yellow-700 text-black lg:mr-3">Delete</button>
+                                <button onClick={() => handleToDelete(_id)} className="btn-small font-semibold px-3 py-1 rounded-tl-xl rounded-br-xl bg-gradient-to-t from-red-500 via-orange-600 to-yellow-700 text-black lg:mr-3">Delete</button>
                             </div>
                         </a>
 
@@ -52,6 +54,10 @@ const MyReviewCard = ({ review, handleToDelete }) => {
                             <p className="mr-5 font-semibold ">Rating:{rating}</p>
                         </div>
 
+                        {/* The button to open modal */}
+
+                        {/* <p>{/<em> Put this part before </body> tag </em>/}</p> */}
+                        <UpdateModal serviceName={serviceName}></UpdateModal>
 
                     </div>
                 </div>
