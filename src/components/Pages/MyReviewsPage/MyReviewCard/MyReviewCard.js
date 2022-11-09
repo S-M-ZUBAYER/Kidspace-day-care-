@@ -1,7 +1,9 @@
 import React from 'react';
 
-const MyReviewCard = ({ review }) => {
-    const { serviceName, customer, customerPhoto, email, message, rating } = review;
+const MyReviewCard = ({ review, handleToDelete }) => {
+    const { serviceName, customer, customerPhoto, email, message, rating, _id } = review;
+
+
     return (
         <div className="w-2/3 py-12 mx-auto ">
             <article class="rounded-l-3xl md:flex bg-gradient-to-t from-red-300 via-orange-300 to-yellow-200 transition hover:shadow-xl">
@@ -38,7 +40,7 @@ const MyReviewCard = ({ review }) => {
                                 <h3 class="font-bold  text-gray-900">
                                     Customer: {customer}
                                 </h3>
-                                <button to='/login' className="btn-small font-semibold px-3 py-1 rounded-tl-xl rounded-br-xl bg-gradient-to-t from-red-500 via-orange-600 to-yellow-700 text-black lg:mr-3">Delete</button>
+                                <button to='/login' onClick={() => handleToDelete(_id)} className="btn-small font-semibold px-3 py-1 rounded-tl-xl rounded-br-xl bg-gradient-to-t from-red-500 via-orange-600 to-yellow-700 text-black lg:mr-3">Delete</button>
                             </div>
                         </a>
 
