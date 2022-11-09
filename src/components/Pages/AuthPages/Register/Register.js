@@ -7,8 +7,10 @@ import { FacebookAuthProvider, GithubAuthProvider, GoogleAuthProvider } from 'fi
 import { useState } from 'react';
 import { AuthContext } from '../../../../contexts/AuthProvider/AuthProvider';
 import toast from 'react-hot-toast';
+import useTitle from '../../../../UseTItle/UseTitle';
 
 const Register = () => {
+    useTitle('Register');
     const [error, setError] = useState('');
     const [accepted, setAccepted] = useState(false);
     const [seccess, setSuccess] = useState(false)

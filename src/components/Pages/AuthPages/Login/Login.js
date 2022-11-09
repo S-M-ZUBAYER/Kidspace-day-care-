@@ -6,6 +6,7 @@ import img_logo from '../../../../assets/img/logo.jpg'
 import { FacebookAuthProvider, GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../../../contexts/AuthProvider/AuthProvider';
+import useTitle from '../../../../UseTItle/UseTitle';
 
 const tokenCreate = (user) => {
     const currentUser = {
@@ -26,7 +27,7 @@ const tokenCreate = (user) => {
 }
 
 const LogIn = () => {
-
+    useTitle('Login');
     const navigate = useNavigate()
     const [error, setError] = useState('');
     const { loading, signIn, setLoading, LogInWithGoogle, logInWithGithub, logInWithFacebook } = useContext(AuthContext);

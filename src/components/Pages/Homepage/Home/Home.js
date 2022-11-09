@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import useTitle from '../../../../UseTItle/UseTitle';
 import ServiceCard from '../../ServicesPage/ServiceCard/ServiceCard';
 import Events from '../Events/Events';
 import Header from '../Header/Header';
 import OurNews from '../OurNews/OurNews';
 
 const Home = () => {
+    useTitle('Home')
     const [limitedServices, setLimitedServices] = useState([]);
 
     useEffect(() => {

@@ -2,11 +2,13 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../../contexts/AuthProvider/AuthProvider';
 import PrivateRoutes from '../../../../Routes/PrivateRoutes/PrivateRoutes';
+import useTitle from '../../../../UseTItle/UseTitle';
 import Loading from '../../../Loading/Loading';
 import ReviewCard from '../ReviewCard/ReviewCard';
 import ReviewForm from '../ReviewForm/ReviewForm';
 
 const Review = ({ service }) => {
+    useTitle('Review')
     const { user, loading } = useContext(AuthContext);
     const [reviews, setReviews] = useState([]);
     const navigate = useNavigate();

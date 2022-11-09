@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Contact = () => {
+
     return (
         <div>
             <div className="flex justify-center bg-gradient-to-t from-black via-slate-800 to-black">
@@ -36,7 +37,7 @@ const Contact = () => {
                         </div>
                     </div>
                     <div className="w-3/4 lg:w-2/3 ">
-                        <div className="w-3/4 lg:w-1/2 overflow-contain h-min">  <iframe width="80%" height="500px" className="mx-auto rounded-2xl" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20Kushtia+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> </div>
+                        <div className="w-3/4 lg:w-1/2 overflow-contain h-min">  <iframe width="80%" height="500px" className="mx-auto rounded-2xl" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20Kushtia+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> </div>
                     </div>
                 </div>
             </div>
@@ -144,7 +145,7 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-                <iframe width="80%" height="500px" className="mx-auto rounded-2xl" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20Kushtia+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                <iframe width="80%" height="500px" className="mx-auto rounded-2xl" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20Kushtia+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
 
             </section>
 

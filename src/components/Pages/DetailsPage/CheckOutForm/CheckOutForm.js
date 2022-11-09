@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../../../contexts/AuthProvider/AuthProvider';
+import useTitle from '../../../../UseTItle/UseTitle';
 
 const CheckOutForm = ({ service }) => {
+    useTitle('CheckOut')
     const { user } = useContext(AuthContext);
     const { serviceName, img, price, time, rating, _id } = service;
     const handleToCheckOut = event => {
