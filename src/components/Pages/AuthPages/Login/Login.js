@@ -48,12 +48,12 @@ const LogIn = () => {
             .then((result) => {
                 const user = result.user;
                 console.log(user)
-                toast('Log In successfully')
+                toast.success('Log In successfully completed')
                 if (user?.uid) {
                     navigate(from, { replace: true });
                 }
                 else {
-                    toast("register firest")
+                    toast.error("Log in failed")
                 }
             })
             .catch(error => console.error(error))

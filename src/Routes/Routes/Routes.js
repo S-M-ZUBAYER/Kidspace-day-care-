@@ -11,6 +11,8 @@ import Main from "../../layout/Main/Main";
 import ErrorPage from '../../Shared/ErrorPage/ErrorPage';
 import Contact from '../../components/Pages/Contact/Contact';
 import DetailsPage from '../../components/Pages/DetailsPage/DetailsPage';
+import AddServices from '../../components/Pages/AddServicesPage/AddServices/AddServices';
+import MyReviews from '../../components/Pages/MyReviewsPage/MyReviews/MyReviews';
 
 
 export const routes = createBrowserRouter([
@@ -35,7 +37,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/services',
                 // loader: () => fetch('http://localhost:5000/services'),
-                element: <PrivateRoutes><Services></Services></PrivateRoutes>
+                element: <Services></Services>
             },
             {
                 path: '/login',
@@ -44,6 +46,14 @@ export const routes = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/addServices',
+                element: <AddServices></AddServices>
+            },
+            {
+                path: '/myReviews',
+                element: <MyReviews></MyReviews>
             },
             // {
             //     path: '/about',

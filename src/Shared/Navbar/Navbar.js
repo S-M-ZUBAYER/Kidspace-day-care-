@@ -22,6 +22,8 @@ const Navbar = () => {
                                 </Link>
 
                             </li>
+                            <li><Link to='addServices'>Add Services</Link></li>
+                            <li><Link to='myReviews'>My Reviews</Link></li>
                             <li><Link to='faq'>FAQ</Link></li>
                             <li><Link to='blog'>Blog</Link></li>
                             <li><Link to='about'>About</Link></li>
@@ -43,6 +45,8 @@ const Navbar = () => {
                             <li><a>Submenu 2</a></li>
                         </ul> */}
                         </li>
+                        <li><Link to='addServices'>Add Services</Link></li>
+                        <li><Link to='myReviews'>My Reviews</Link></li>
                         <li><Link to='faq'>FAQ</Link></li>
                         <li><Link to='blog'>Blog</Link></li>
                         <li><Link to='about'>About</Link></li>

@@ -23,6 +23,7 @@ const Home = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-12 py-12 bg-gradient-to-t from-black via-slate-800 to-gray-900 text-slate-400">
                 {limitedServices.map(service => <ServiceCard service={service} key={service._id}></ServiceCard>)}
+
             </div>
 
 

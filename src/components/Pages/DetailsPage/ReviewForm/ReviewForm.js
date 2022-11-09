@@ -4,8 +4,8 @@ import { AuthContext } from '../../../../contexts/AuthProvider/AuthProvider';
 
 const ReviewForm = ({ service }) => {
     const { user } = useContext(AuthContext);
-    const { serviceName, img, price, time, rating, _id } = service;
-    const handleToCheckOut = event => {
+    const { serviceName, img, price, time, _id } = service;
+    const handleToReview = event => {
         event.preventDefault()
         const form = event.target;
         const name = form.name.value;
@@ -13,6 +13,7 @@ const ReviewForm = ({ service }) => {
         const email = user?.email || 'unregistered';
         const phone = form.phone.value;
         const message = form.message.value;
+        const rating = form.rating.value;
 
         const review = {
             serviceId: _id,
@@ -54,7 +55,7 @@ const ReviewForm = ({ service }) => {
         <div className="w-full flex justify-center py-24">
 
             <div className="rounded-lg w-3/4 mx-auto lg:mx-0 bg-white p-8 shadow-lg lg:col-span-3 lg:p-12 bg-gradient-to-t from-gray-700 via-slate-800 to-gray-700">
-                <form onSubmit={handleToCheckOut} action="" className="space-y-4 font-semibold text-slate-900">
+                <form onSubmit={handleToReview} action="" className="space-y-4 font-semibold text-slate-900">
                     <div>
                         <h1 className="text-3xl font-bold mb-3 text-center text-lime-400">Review Form</h1>
                         <h2 className="text-lg font-semibold text-slate-300">Service: <span className="text-orange-500">{serviceName}</span></h2>
