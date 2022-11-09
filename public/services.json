@@ -202,5 +202,38 @@
                 "photo": "https://i.ibb.co/NW1JDqk/kids.jpg"
             }
         ]
+    },
+    {
+        "serviceName": "Kids Exercise for Fit",
+        "img": "https://i.ibb.co/PD8b6NN/i-Stock-1056357980.webp",
+        "rating": 4.5,
+        "price": "30",
+        "time": "6am-7am ",
+        "description": "Guidelines from the Department of Health and Human Services recommend that children and adolescents age 6 and older get at least an hour a day of moderate or vigorous aerobic activity. Children should do vigorous activities, such as running or biking, at least three days a week. They should also participate in muscle-strengthening activities, such as body weight exercises, at least three days a week. Children should also do bone-strengthening activities, such as jumping rope or running, at least three days a week. $The Department of Health and Human Services recommends that children ages 3 to 5 be physically active throughout the day to enhance their growth and development. Adults who care for children can encourage them to participate in active play that includes many activities. $ Exercise with your child to better your own health while helping your child develop sound exercise habits. You are a role model, and your child is more likely to be physically active if you make physical activity a family priority. Take a family bike ride or walk together, or play catch in the yard. Plant a family garden, and watch vegetables and flowers grow over time. Limit screen time on devices and think of ways to get active with your child instead. ",
+        "facility": [
+            {
+                "name": "Free Equipments",
+                "Extra Fees": "Free",
+                "photo": "https://i.ibb.co/9HVCxdZ/th.jpg"
+            },
+            {
+                "name": "Provide Juice",
+                "status": "Available Now",
+                "Extra Fees": "10$",
+                "photo": "https://i.ibb.co/WFKMW3z/th.jpg"
+            },
+            {
+                "name": "Proper Monitoring",
+                "status": "Available Now",
+                "Extra Fees": "Free",
+                "photo": "https://i.ibb.co/Qvpsd6Z/th.jpg"
+            },
+            {
+                "name": "First Aid service",
+                "status": "Available Now",
+                "Extra Fees": "Free",
+                "photo": "https://i.ibb.co/mcYnPNS/th.jpg"
+            }
+        ]
     }
 ]

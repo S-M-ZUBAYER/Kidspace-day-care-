@@ -1,8 +1,18 @@
 import React from 'react';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 import { Link } from 'react-router-dom';
 
 const ServiceCard = ({ service }) => {
     const { serviceName, _id, img, time, price, description, facility, rating } = service;
+    const photoView = (photo) => {
+        { console.log(photo) }
+        < PhotoProvider >
+            <PhotoView src="/1.jpg">
+                <img src="/1-thumbnail.jpg" alt="" />
+            </PhotoView>
+        </PhotoProvider >
+    }
     return (
         <div>
             <div className="max-w-lg p-4 shadow-md rounded-tl-2xl rounded-br-2xl  dark:dark:bg-gray-900 dark:dark:text-gray-100 bg-gradient-to-t from-black via-slate-800 to-gray-600 text-slate-400">
@@ -13,7 +23,7 @@ const ServiceCard = ({ service }) => {
                     <a rel="noopener noreferrer" href="#">Rating: {rating}</a>
                 </div>
                 <div className="space-y-4">
-                    <div className="space-y-2">
+                    <div onClick={() => photoView(img)} className="space-y-2">
                         <img src={img} alt="img" className="block object-cover object-center w-full rounded-md h-72 dark:dark:bg-gray-500" />
                         <div className="flex items-center text-xs">
                             <p>Price: {price}</p>

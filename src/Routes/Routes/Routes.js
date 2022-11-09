@@ -49,11 +49,11 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/addServices',
-                element: <AddServices></AddServices>
+                element: <PrivateRoutes><AddServices></AddServices></PrivateRoutes>
             },
             {
                 path: '/myReviews',
-                element: <MyReviews></MyReviews>
+                element: <PrivateRoutes><MyReviews></MyReviews></PrivateRoutes>
             },
             // {
             //     path: '/about',
