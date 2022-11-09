@@ -1,6 +1,7 @@
 import React from 'react';
 
-const MyReviewCard = () => {
+const MyReviewCard = ({ review }) => {
+    const { serviceName, customer, customerPhoto, email, message, rating } = review;
     return (
         <div className="w-2/3 py-12 mx-auto ">
             <article class="rounded-l-3xl md:flex bg-gradient-to-t from-red-300 via-orange-300 to-yellow-200 transition hover:shadow-xl">
@@ -27,29 +28,26 @@ const MyReviewCard = () => {
                     <div class="border-l border-gray-900/10 p-2 sm:border-l-transparent sm:p-6">
                         <a href="#">
                             <div className="flex justify-between mb-2">
-                                <h3 class="font-bold uppercase text-gray-900">
-                                    Customer name
+                                <h3 class="font-bold  text-gray-900">
+                                    Service: {serviceName}
                                 </h3>
-                                <button to='/login' className="btn-small px-3 py-1 rounded-tl-xl rounded-br-xl bg-gradient-to-t from-lime-400 via-teal-300 to-emerald-600 text-black lg:mr-3">Update</button>
+                                <button to='/login' className="btn-small font-semibold px-3 py-1 rounded-tl-xl rounded-br-xl bg-gradient-to-t from-lime-400 via-teal-300 to-emerald-600 text-black lg:mr-3">Update</button>
                             </div>
 
                             <div className="flex justify-between">
-                                <h3 class="font-bold uppercase text-gray-900">
-                                    service name
+                                <h3 class="font-bold  text-gray-900">
+                                    Customer: {customer}
                                 </h3>
-                                <button to='/login' className="btn-small px-3 py-1 rounded-tl-xl rounded-br-xl bg-gradient-to-t from-lime-400 via-teal-300 to-emerald-600 text-black lg:mr-3">Delete</button>
+                                <button to='/login' className="btn-small font-semibold px-3 py-1 rounded-tl-xl rounded-br-xl bg-gradient-to-t from-red-500 via-orange-600 to-yellow-700 text-black lg:mr-3">Delete</button>
                             </div>
                         </a>
 
                         <p class="mt-2 text-sm leading-relaxed text-gray-700 line-clamp-3">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-                            dolores, possimus pariatur animi temporibus nesciunt praesentium dolore
-                            sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta,
-                            voluptates neque explicabo tempora nisi culpa <br />
+                            {message}
                         </p>
-                        <div className="flex justify-between">
-                            <p>Email: </p>
-                            <p className="mr-5">Rating</p>
+                        <div className="flex justify-between mt-3">
+                            <p className='font-semibold'>Email: {email}</p>
+                            <p className="mr-5 font-semibold ">Rating:{rating}</p>
                         </div>
 
 

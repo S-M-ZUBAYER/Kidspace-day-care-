@@ -1,15 +1,23 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../../contexts/AuthProvider/AuthProvider';
 import MyReviewCard from '../MyReviewCard/MyReviewCard';
 
 const MyReviews = () => {
     const { user } = useContext(AuthContext);
-    fetch('http://localhost:5000/reviews?email=smzubayer9004@gmail.com')
-        .then(res => res.json())
-        .then(data => console.log(data))
+    const [myReviews, setMyReviews] = useState([]);
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/myReviews?email=${user?.email}`)
+            .then(res => res.json())
+            .then(data => setMyReviews(data))
+    }, [user?.email]);
+
     return (
         <div className=" bg-gradient-to-t from-black via-slate-800 to-black">
-            <MyReviewCard></MyReviewCard>
+            <div>
+                {myReviews.map(review => <MyReviewCard review={review} key={review._id}></MyReviewCard>)}
+            </div>
+
         </div>
     );
 };
