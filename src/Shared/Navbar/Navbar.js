@@ -25,7 +25,7 @@ const Navbar = () => {
                             {user ?
                                 <>
                                     <li><Link to='addServices'>Add Services</Link></li>
-                                    <li><Link to='myReviews'>My Reviews</Link></li>
+                                    <li><Link to='reviews'>My Reviews</Link></li>
                                 </>
                                 :
                                 ""
@@ -54,7 +54,7 @@ const Navbar = () => {
                         {user ?
                             <>
                                 <li><Link to='addServices'>Add Services</Link></li>
-                                <li><Link to='myReviews'>My Reviews</Link></li>
+                                <li><Link to='reviews'>My Reviews</Link></li>
                             </>
                             :
                             ""
