@@ -5,44 +5,6 @@ const Contact = () => {
 
     return (
         <div>
-            <div className="flex justify-center bg-gradient-to-t from-black via-slate-800 to-black">
-                <div className="flex md:flex-row flex-col justify-between  m-4 ">
-                    <div className="lg:w-full bg-black bg-gradient-to-t from-gray-700 via-slate-800 to-gray-700 ">
-                        <div className="flex justify-center flex-col items-center ">
-                            <div className="text-white m-6 text-xl z-200"> Contact Us </div>
-                            <div className="text-white m-6 z-200"> We are always here to help out whatever way we can : </div>
-                            <div className="text-white m-6 z-200">
-                                <div className="flex m-2">
-                                    <ion-icon name="person-outline" className="m-2"></ion-icon> <input placeholder="Name"
-                                        className="bg-gray-800 p-2 rounded-3xl" />
-                                </div>
-                                <div className="flex m-2">
-                                    <ion-icon name="mail-outline" className="m-2"></ion-icon> <input placeholder="E-mail"
-                                        className="bg-gray-800 p-2 rounded-3xl" />
-                                </div>
-                                <div className="flex m-2">
-                                    <ion-icon name="call-outline" className="m-2"></ion-icon> <input placeholder="Phone"
-                                        className="bg-gray-800 p-2 rounded-3xl" />
-                                </div>
-                                <div className="flex m-2">
-                                    <ion-icon name="create-outline" className="m-2"></ion-icon> <input
-                                        placeholder="Type your message" className="bg-gray-800 p-2 rounded-3xl" />
-                                </div>
-                                <div className="block m-2justify-center">
-                                    <div className="bg-blue-700 p-2 rounded-3xl hover:bg-blue-800 cursor-pointer ">
-                                        <div className="flex justify-center"> Send </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="w-3/4 lg:w-2/3 ">
-                        <div className="w-3/4 lg:w-1/2 overflow-contain h-min">  <iframe width="80%" height="500px" className="mx-auto rounded-2xl" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20Kushtia+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> </div>
-                    </div>
-                </div>
-            </div>
-
-
             <section className="min-h-screen text-slate-300 bg-white dark:bg-gray-900 bg-gradient-to-t from-black via-slate-800 to-black">
                 <div className="container px-6 py-10 mx-auto">
                     <div className="lg:flex lg:items-center lg:-mx-10">
@@ -57,18 +19,18 @@ const Contact = () => {
                             <form className="mt-12 text-slate-300">
                                 <div className="-mx-2 md:items-center md:flex">
                                     <div className="flex-1 px-2">
-                                        <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Full Name</label>
+                                        <label className="block mb-2 text-sm text-gray-200 dark:text-gray-200">Full Name</label>
                                         <input type="text" placeholder="John Doe" className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                                     </div>
 
                                     <div className="flex-1 px-2 mt-4 md:mt-0">
-                                        <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email address</label>
+                                        <label className="block mb-2 text-sm text-gray-200 dark:text-gray-200">Email address</label>
                                         <input type="email" placeholder="johndoe@example.com" className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                                     </div>
                                 </div>
 
                                 <div className="w-full mt-4">
-                                    <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Message</label>
+                                    <label className="block mb-2 text-sm text-gray-200 dark:text-gray-200">Message</label>
                                     <textarea className="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-56 dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Message"></textarea>
                                 </div>
 
@@ -88,7 +50,7 @@ const Contact = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
 
-                                    <span className="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">
+                                    <span className="mx-2 text-gray-200 truncate w-72 dark:text-gray-400">
                                         Cecilia Chapman 711-2880 Nulla
                                         St. Mankato Mississippi 96522
                                     </span>
@@ -99,7 +61,7 @@ const Contact = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                     </svg>
 
-                                    <span className="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">+880 1304979278</span>
+                                    <span className="mx-2 text-gray-200 truncate w-72 dark:text-gray-400">+880 1304979278</span>
                                 </p>
 
                                 <p className="flex items-start -mx-2">
@@ -107,12 +69,12 @@ const Contact = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                     </svg>
 
-                                    <span className="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">smzubayer9004@gamil.com</span>
+                                    <span className="mx-2 text-gray-200 truncate w-72 dark:text-gray-400">smzubayer9004@gamil.com</span>
                                 </p>
                             </div>
 
                             <div className="mt-6 w-80 md:mt-8">
-                                <h3 className="text-gray-600 dark:text-gray-300 ">Follow us</h3>
+                                <h3 className="text-gray-200 dark:text-gray-300 ">Follow us</h3>
 
                                 <div className="flex mt-4 -mx-1.5 ">
                                     <Link className="mx-1.5 dark:hover:text-blue-400 text-gray-400 transition-colors duration-300 transform hover:text-blue-500" to=''>

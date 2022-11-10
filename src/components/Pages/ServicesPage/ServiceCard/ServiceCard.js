@@ -5,17 +5,10 @@ import { Link } from 'react-router-dom';
 
 const ServiceCard = ({ service }) => {
     const { serviceName, _id, img, time, price, description, facility, rating } = service;
-    // const handlePhotoView = (photo) => {
-    //     { console.log(photo) }
-    //     < PhotoProvider >
-    //         <PhotoView src={photo}>
-    //             <img src={photo} alt="" />
-    //         </PhotoView>
-    //     </PhotoProvider >
-    // }
+
     return (
         <div>
-            <div className="max-w-lg p-4 shadow-md rounded-tl-2xl rounded-br-2xl  dark:dark:bg-gray-900 dark:dark:text-gray-100 bg-gradient-to-t from-black via-slate-800 to-gray-600 text-slate-400">
+            <div className="max-w-lg p-4 my-5 shadow-md rounded-tl-2xl rounded-br-2xl  dark:dark:bg-gray-900 dark:dark:text-gray-100 bg-gradient-to-t from-black via-slate-800 to-gray-600 text-slate-400">
                 <div className="flex justify-between pb-4 border-bottom">
                     <div className="flex items-center">
                         <a rel="noopener noreferrer" href="#" className="mb-0 capitalize dark:dark:text-gray-100">Time:{time}</a>

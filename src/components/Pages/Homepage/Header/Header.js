@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <div>
             <section
-                className="relative bg-[url(https://images.idgesg.net/images/article/2019/11/ai_artificial_intelligence_ml_machine_learning_vector_by_kohb_gettyimages_1146634284-100817775-large.jpg)] bg-cover bg-center bg-no-repeat"
+                className="relative bg-[url(https://i.ytimg.com/vi/wYaXaWjROOk/maxresdefault.jpg)] bg-cover bg-center bg-no-repeat"
             >
                 <div
                     className="absolute inset-0 bg-white/75 sm:bg-transparent sm:bg-gradient-to-r sm:from-white/95 sm:to-white/25"
@@ -19,12 +19,12 @@ const Header = () => {
                             Welcome To Our
 
                             <strong className="block font-extrabold text-yellow-500">
-                                Study Zone Platform.
+                                Kidspace For Child.
                             </strong>
                         </h1>
 
                         <p className="mt-4 max-w-lg sm:text-xl text-cyan-800 sm:leading-relaxed">
-                            Welcome to learn modern technology, and set your bright future...
+                            Welcome to your another home, and spend time with different activities...
                         </p>
 
                         <div className="mt-8 flex flex-wrap gap-4 text-center">

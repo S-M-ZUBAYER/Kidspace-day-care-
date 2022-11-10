@@ -13,6 +13,7 @@ import Contact from '../../components/Pages/Contact/Contact';
 import DetailsPage from '../../components/Pages/DetailsPage/DetailsPage';
 import AddServices from '../../components/Pages/AddServicesPage/AddServices/AddServices';
 import MyReviews from '../../components/Pages/MyReviewsPage/MyReviews/MyReviews';
+import Blog from '../../components/BlogPage/Blog';
 
 
 export const routes = createBrowserRouter([
@@ -29,11 +30,6 @@ export const routes = createBrowserRouter([
                 path: '/home',
                 element: <Home></Home>
             },
-            // {
-            //     path: '/home',
-            //     loader: () => fetch('https://study-zone-server-site.vercel.app/courses'),
-            //     element: <Home></Home>
-            // },
             {
                 path: '/services',
                 // loader: () => fetch('https://kidspace-server-site.vercel.app/services'),
@@ -55,18 +51,10 @@ export const routes = createBrowserRouter([
                 path: '/reviews',
                 element: <PrivateRoutes><MyReviews></MyReviews></PrivateRoutes>
             },
-            // {
-            //     path: '/about',
-            //     element: <About></About>
-            // },
-            // {
-            //     path: '/faq',
-            //     element: <FAQ></FAQ>
-            // },
-            // {
-            //     path: '/blog',
-            //     element: <Blog></Blog>
-            // },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
+            },
             {
                 path: '/contact',
                 element: <Contact></Contact>
@@ -76,12 +64,7 @@ export const routes = createBrowserRouter([
                 loader: ({ params }) => fetch(`https://kidspace-server-site.vercel.app/services/${params.id}`),
                 element: <DetailsPage></DetailsPage>
             },
-            // {
-            //     path: '/items/:course_id',
-            //     loader: ({ params }) => fetch(`https://study-zone-server-site.vercel.app/items/${params.course_id}`),
-            //     element: <PrivateRoutes><CheckOut></CheckOut></PrivateRoutes>,
 
-            // }
         ]
     }
 ]);

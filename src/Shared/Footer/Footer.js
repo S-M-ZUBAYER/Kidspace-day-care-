@@ -6,12 +6,12 @@ const Footer = () => {
             <div className="bg-gray-700 p-3 space-y-10 md:grid grid-cols-2 md:-mt-6 lg:grid-cols-4 bg-gradient-to-t from-black via-slate-800 to-black">
                 <div className="w-1/2 md:ml-24 md:mt-9 md:w-3/4">
                     <h1 className="text-orange-400 text-xl font-medium">Company</h1> <br />
-                    <p className="text-gray-300/80 text-base hover:text-yellow-300 cursor-none"> A123 Lost Street <br /> Chandigarh,
-                        PB 535022 <br /> India </p> <br />
+                    <p className="text-gray-300/80 text-base hover:text-yellow-300 cursor-none"> NS Road <br /> ,
+                        Kushtia Sadar <br /> Kushtia </p> <br />
                     <p className="text-gray-200/80 text-base hover:text-yellow-300 cursor-pointer"> <strong
-                        className="tracking-wide text-orange-400 font-normal">Phone:</strong> +91 7008090111 </p>
+                        className="tracking-wide text-orange-400 font-normal">Phone:</strong> +880-1304979278 </p>
                     <p className="text-gray-200/80 text-base hover:text-yellow-300 cursor-pointer"> <strong
-                        className="tracking-wide text-orange-400 font-normal">Email:</strong> info@gmail.com </p>
+                        className="tracking-wide text-orange-400 font-normal">Email:</strong> smzubayer9004@gmail.com </p>
                 </div>
                 <div className="leading-9 md:w-2/4 md:order-3 md:ml-24">
                     <h1 className="text-orange-400 text-xl font-medium tracking-[0.030rem]"> Useful Links </h1>
@@ -31,16 +31,16 @@ const Footer = () => {
                 <div className="leading-9 md:w-3/4 md:order-4">
                     <h1 className="text-orange-400 text-xl font-medium tracking-[0.030rem]"> Our Services </h1>
                     <ul className="mt-2 text-gray-300/80">
-                        <li> <i className="fa fa-chevron-right text-orange-400"></i> <a href="#" className="hover:text-yellow-300"> Web
-                            Design</a> </li>
-                        <li> <i className="fa fa-chevron-right text-orange-400"></i> <a href="#" className="hover:text-yellow-300"> Web
-                            Development</a> </li>
                         <li> <i className="fa fa-chevron-right text-orange-400"></i> <a href="#" className="hover:text-yellow-300">
-                            Product Management</a> </li>
+                            Child daily exercise</a> </li>
                         <li> <i className="fa fa-chevron-right text-orange-400"></i> <a href="#" className="hover:text-yellow-300">
-                            Marketing</a> </li>
+                            Child pre school training</a> </li>
                         <li> <i className="fa fa-chevron-right text-orange-400"></i> <a href="#" className="hover:text-yellow-300">
-                            Graphic Design</a> </li>
+                            Child food service</a> </li>
+                        <li> <i className="fa fa-chevron-right text-orange-400"></i> <a href="#" className="hover:text-yellow-300">
+                            English Learning</a> </li>
+                        <li> <i className="fa fa-chevron-right text-orange-400"></i> <a href="#" className="hover:text-yellow-300">
+                            Sports training</a> </li>
                     </ul>
                 </div>
                 <div className="md:order-2 lg:order-last">
@@ -55,7 +55,7 @@ const Footer = () => {
             <div className="bg-gray-900 p-3 flex flex-col text-center pt-5 space-y-8 md:flex-row md:justify-between md:space-y-0 bg-gradient-to-t from-black via-slate-800 to-gray-900">
                 <div
                     className="flex mx-3 justify-between space-x-20 md:flex-row text-gray-200 md:space-x-28 md:ml-20 lg:ml-24 lg:space-x-[13rem] xl:space-x-72 xl:ml-24">
-                    <p>@ Copyright <strong>Company.</strong>All Rights Reserved</p>
+                    <p>@ Copyright <strong>2022.</strong>Warning</p>
                     <p>Designed by <span className="text-orange-400">TailwindCSS</span></p>
                 </div>
                 <div
