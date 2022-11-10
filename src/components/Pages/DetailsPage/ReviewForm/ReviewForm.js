@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../../../contexts/AuthProvider/AuthProvider';
+import ReactDom from 'react-dom';
 
 const ReviewForm = ({ service }) => {
     const { user } = useContext(AuthContext);
-    const { serviceName, img, price, time, _id } = service;
+    const { serviceName, img, price, _id } = service;
+    const date = new Date().toLocaleDateString();
+    const time = new Date().toLocaleTimeString();
     const handleToReview = event => {
         event.preventDefault()
         const form = event.target;
@@ -14,6 +17,8 @@ const ReviewForm = ({ service }) => {
         const phone = form.phone.value;
         const message = form.message.value;
         const rating = form.rating.value;
+        const currentTime = form.time.value;
+        const currentDate = form.date.value;
 
         const review = {
             serviceId: _id,
@@ -24,15 +29,17 @@ const ReviewForm = ({ service }) => {
             phone,
             message,
             img,
-            rating
+            rating,
+            currentDate,
+            currentTime
         }
-        console.log(review)
-        if (phone.length < 11) {
-            alert('Phone number Should be 11 digit or Longer than 11 digit');
-            return;
-        }
+        // console.log(review)
+        // if (phone.length < 11) {
+        //     alert('Phone number Should be 11 digit or Longer than 11 digit');
+        //     return;
+        // }
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://kidspace-server-site.vercel.app/reviews', {
             method: "POST",
             headers: {
                 'content-type': "application/json"
@@ -121,6 +128,34 @@ const ReviewForm = ({ service }) => {
                                 type="tel"
                                 name='rating'
                                 id="rating"
+
+                            />
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label className="sr-only" for="phone">Date</label>
+                            <input
+                                className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                                placeholder="Current date"
+                                type="tel"
+                                name='date'
+                                id="phone"
+                                defaultValue={date}
+                                readOnly
+                            />
+                        </div>
+
+                        <div>
+                            <label className="sr-only" for="phone">Time</label>
+                            <input
+                                className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                                placeholder="Current Time"
+                                type="tel"
+                                name='time'
+                                id="rating"
+                                defaultValue={time}
+                                readOnly
 
                             />
                         </div>

@@ -1,7 +1,8 @@
 import React from 'react';
 
 const ReviewCard = ({ review }) => {
-    const { serviceName, customer, customerPhoto, rating, img, message, phone } = review;
+    const { serviceName, customer, customerPhoto, rating, img, message, phone, currentTime, currentDate } = review;
+
     return (
         <div>
             <div className=" bg-gradient-to-t from-gray-700 via-slate-800 to-gray-900">
@@ -21,6 +22,14 @@ const ReviewCard = ({ review }) => {
                     <p className="mt-4 text-sm text-gray-500">
                         {message}
                     </p>
+                    <div className="flex justify-between items-center mt-3">
+                        <p className="mt-1 text-xs font-medium text-gray-500">
+                            Review Time: {currentTime}
+                        </p>
+                        <p className="mt-4 text-sm text-gray-500">
+                            Review Date: {currentDate}
+                        </p>
+                    </div>
 
                     <div className="mt-8 flex justify-center gap-0.5 text-green-500">
                         <svg

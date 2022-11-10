@@ -11,7 +11,7 @@ const Home = () => {
     const [limitedServices, setLimitedServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/limitedServices')
+        fetch('https://kidspace-server-site.vercel.app/limitedServices')
             .then(res => res.json())
             .then(data => {
                 setLimitedServices(data)

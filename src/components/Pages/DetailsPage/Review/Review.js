@@ -15,7 +15,7 @@ const Review = ({ service }) => {
     const location = useLocation();
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://kidspace-server-site.vercel.app/reviews')
             .then(res => res.json())
             .then(data => {
                 setReviews(data);
@@ -23,7 +23,6 @@ const Review = ({ service }) => {
             .catch(err => console.error(err))
     }, []);
     const handleToLogInForReview = () => {
-        console.log(loading)
         if (loading) {
             return <div>
                 <Loading></Loading>

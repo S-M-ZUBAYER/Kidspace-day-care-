@@ -32,7 +32,7 @@ const CheckOutForm = ({ service }) => {
             return;
         }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://kidspace-server-site.vercel.app/orders', {
             method: "POST",
             headers: {
                 'content-type': "application/json"

@@ -10,7 +10,7 @@ const MyReviews = () => {
     const handleToDelete = (id) => {
         const proceed = window.confirm('Are you sure, you want to remove this review!!!');
         if (proceed) {
-            fetch(`http://localhost:5000/myReviews/${id}`, {
+            fetch(`https://kidspace-server-site.vercel.app/myReviews/${id}`, {
                 method: "DELETE",
             })
                 .then(res => res.json())
@@ -26,7 +26,7 @@ const MyReviews = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myReviews?email=${user?.email}`, {
+        fetch(`https://kidspace-server-site.vercel.app/myReviews?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('Kid-space')}`
             }
@@ -46,12 +46,21 @@ const MyReviews = () => {
 
     return (
         <div className=" bg-gradient-to-t from-black via-slate-800 to-black">
-            <div>
-                {myReviews.map(review => <MyReviewCard
-                    review={review}
-                    handleToDelete={handleToDelete}
-                    key={review._id}></MyReviewCard>)}
-            </div>
+            {myReviews.length === 0 ?
+                <>
+                    <h2 className="text-red-400 font-bold text-2xl flex justify-center items-center">
+                        No Review Available. Please Add First
+                    </h2>
+                </> :
+                <>
+                    <div>
+                        {myReviews.map(review => <MyReviewCard
+                            review={review}
+                            handleToDelete={handleToDelete}
+                            key={review._id}></MyReviewCard>)}
+                    </div>
+                </>}
+
 
         </div>
     );

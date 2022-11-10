@@ -65,7 +65,7 @@ const Navbar = () => {
                         <li><Link to='contact'>Contact</Link></li>
                     </ul>
                 </div>
-                <input type="checkbox" className="toggle toggle-sm ml-10" checked />
+                {/* <input type="checkbox" className="toggle toggle-sm ml-10" checked /> */}
                 <div className="navbar-end">
                     {user?.uid ?
                         <>

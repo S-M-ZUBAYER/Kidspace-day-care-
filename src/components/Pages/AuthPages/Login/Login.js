@@ -7,12 +7,13 @@ import { FacebookAuthProvider, GithubAuthProvider, GoogleAuthProvider } from 'fi
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../../../UseTItle/UseTitle';
+import Loading from '../../../Loading/Loading';
 
 const tokenCreate = (user) => {
     const currentUser = {
         email: user.email
     }
-    fetch('http://localhost:5000/jwt', {
+    fetch('https://kidspace-server-site.vercel.app/jwt', {
         method: "POST",
         headers: {
             'content-type': 'application/json'
@@ -37,10 +38,15 @@ const LogIn = () => {
     const githubProvider = new GithubAuthProvider();
     const facebookProvider = new FacebookAuthProvider();
     const handlerLogIn = (event) => {
+        setLoading(true);
+        if (loading) {
+            <Loading></Loading>
+        }
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
-        const password = form.password.value;;
+        const password = form.password.value;
+
         signIn(email, password)
             .then(result => {
                 const user = result.user;
