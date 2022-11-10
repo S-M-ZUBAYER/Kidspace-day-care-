@@ -3,6 +3,7 @@ import toast from 'react-hot-toast';
 import { AuthContext } from '../../../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../../../UseTItle/UseTitle';
 
+
 const AddServices = () => {
     const { user } = useContext(AuthContext);
     useTitle("Add services")
@@ -17,6 +18,7 @@ const AddServices = () => {
         const time = form.time.value;
         const description = form.description.value;
         const rating = form.rating.value;
+        const insertTime = new Date().getTime();
 
         const service = {
             serviceName,
@@ -24,7 +26,8 @@ const AddServices = () => {
             rating,
             price,
             time,
-            description
+            description,
+            insertTime
         }
         console.log(service)
 

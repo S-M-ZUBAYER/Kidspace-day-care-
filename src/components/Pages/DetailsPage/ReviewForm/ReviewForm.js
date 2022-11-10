@@ -8,6 +8,7 @@ const ReviewForm = ({ service }) => {
     const { serviceName, img, price, _id } = service;
     const date = new Date().toLocaleDateString();
     const time = new Date().toLocaleTimeString();
+
     const handleToReview = event => {
         event.preventDefault()
         const form = event.target;
@@ -19,6 +20,7 @@ const ReviewForm = ({ service }) => {
         const rating = form.rating.value;
         const currentTime = form.time.value;
         const currentDate = form.date.value;
+        const insertTime = new Date().getTime();
 
         const review = {
             serviceId: _id,
@@ -31,7 +33,8 @@ const ReviewForm = ({ service }) => {
             img,
             rating,
             currentDate,
-            currentTime
+            currentTime,
+            insertTime
         }
         // console.log(review)
         // if (phone.length < 11) {

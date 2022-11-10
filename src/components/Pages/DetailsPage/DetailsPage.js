@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import CheckOutForm from './CheckOutForm/CheckOutForm';
+import DetailsPart from './DetailsPart/DetailsPart';
 import Review from './Review/Review';
 import ReviewForm from './Review/Review';
 import ServiceItems from './ServiceItems/ServiceItems';
@@ -26,7 +27,7 @@ const DetailsPage = () => {
                     {services.map(service => <ServiceItems service={service} key={service._id}></ServiceItems>)}
                 </div>
                 <div className="grid col-span-2">
-                    <h1>Details</h1>
+                    <DetailsPart service={service}></DetailsPart>
                 </div>
                 <div className="grid col-span-1">
                     <CheckOutForm service={service}></CheckOutForm>

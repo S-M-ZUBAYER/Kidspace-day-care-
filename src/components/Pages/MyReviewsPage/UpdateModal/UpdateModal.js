@@ -9,7 +9,7 @@ const UpdateModal = ({ review, setCurrentReview }) => {
     const date = new Date().toLocaleDateString();
     const time = new Date().toLocaleTimeString();
     // useEffect(() => {
-    //     fetch(`http://localhost:5000/myReviews/${_id}`)
+    //     fetch(`https://kidspace-server-site.vercel.app/myReviews/${_id}`)
     // }, [])
 
     const handleToUpdate = event => {
@@ -45,7 +45,7 @@ const UpdateModal = ({ review, setCurrentReview }) => {
         // }
 
 
-        fetch(`http://localhost:5000/myReviews/${review._id}`, {
+        fetch(`https://kidspace-server-site.vercel.app/myReviews/${review._id}`, {
             method: "PUT",
             headers: {
                 'content-type': "application/json"

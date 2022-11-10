@@ -21,7 +21,7 @@ const Review = ({ service }) => {
                 setReviews(data);
             })
             .catch(err => console.error(err))
-    }, []);
+    }, [reviews]);
     const handleToLogInForReview = () => {
         if (loading) {
             return <div>
@@ -34,7 +34,6 @@ const Review = ({ service }) => {
                 state: { from: location },
                 replace: false
             });
-            // <Navigate to='/login' state={{ from: location }} replace ></Navigate>
         }
 
     }
