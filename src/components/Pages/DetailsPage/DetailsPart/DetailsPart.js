@@ -8,7 +8,7 @@ const DetailsPart = ({ service }) => {
     // const messageArr = message.split('$');
     console.log(service)
     return (
-        <div className="mt-24 mx-12 text-slate-200">
+        <div className="mt-12 mx-12 text-slate-200">
             <a href="#" class="block">
                 <div class="flex justify-center ">
                     <strong
